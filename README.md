@@ -30,3 +30,22 @@ alias config='/usr/bin/git --git-dir=<path to .cfg’s Git directory> --work-tre
 ```
 config checkout
 ``` 
+
+## Nvim config
+Since packer.nvim is already bootloaded. Just go into `.config/nvim/lua/sycanz/packer.lua` and source the file
+```
+:so
+```
+then sync packer.nvim:
+```
+:PackerSync
+```
+
+## Tmux config
+The prefix of my config is `C-s`
+1. Install [TPM](https://github.com/tmux-plugins/tpm?tab=readme-ov-file#installation).
+2. Source `.tmux.conf` with shortcut `Prefix + r` or
+```
+source .tmux.conf
+```
+3. Install plugin with TPM by using `Prefix + I`
