@@ -1,0 +1,74 @@
+// documentation: https://zed.dev/docs/configuring-zed
+{
+    "vim_mode": true,
+    "ui_font_size": 16,
+    "buffer_font_size": 13,
+    "theme": {
+        "mode": "system",
+        "light": "One Light",
+        "dark": "Catppuccin Mocha"
+    },
+    "active_pane_magnification": 1.2,
+    "buffer_font_features": {
+        "calt": false
+    },
+    "confirm_quit": true,
+    "inline_completions": {
+        "disabled_globs": [".env"]
+    },
+    "current_line_highlight": "none",
+    "cursor_blink": false,
+    "scrollbar": {
+        "show": "auto",
+        "cursors": true,
+        "git_diff": true,
+        "search_results": true,
+        "selected_symbol": true,
+        "diagnostics": true
+    },
+    "tab_bar": {
+        "show": true
+    },
+    "tabs": {
+        "close_position": "right",
+        "git_status": true
+    },
+    "toolbar": {
+        "breadcrumbs": true,
+        "quick_actions": true
+    },
+    "enable_language_server": true,
+    "use_autoclose": true,
+    "indent_guides": {
+        "enabled": true,
+        "line_width": 1,
+        "coloring": "indent_aware"
+    },
+    "tab_size": 4,
+    "relative_line_numbers": true,
+    "show_completions_on_input": true,
+    "show_completion_documentation": true,
+    "project_panel": {
+        "button": true,
+        "dock": "left",
+        "git_status": true,
+        "default_width": 420
+    },
+    "terminal": {
+        "alternate_scroll": "off",
+        "blinking": "terminal_controlled",
+        "copy_on_select": true,
+        "env": {},
+        "font_family": "Hasklug Nerd Font Mono",
+        "font_size": 15,
+        "option_as_meta": false,
+        "button": false,
+        "shell": {
+            "program": "/usr/bin/zsh"
+        },
+        "toolbar": {
+            "title": true
+        },
+        "working_directory": "current_project_directory"
+    }
+}
