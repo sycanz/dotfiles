@@ -12,7 +12,7 @@ I'm using this repo as a way to save all my dotfiles and somewhat keep track of 
 | Desktop Environment  | Gnome-COSMIC            |
 | Colourscheme         | Catppuccin-Mocha        |
 
-## Installation
+## Installation ⬇️
 According to [this tutorial](https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/), the installation steps are:
 1. Add `.cfg` into .gitignore to avoid recursive issues
 ```
