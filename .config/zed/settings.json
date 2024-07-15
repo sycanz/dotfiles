@@ -70,5 +70,14 @@
             "title": true
         },
         "working_directory": "current_project_directory"
+    },
+    "lsp": {
+        "pyright": {
+            "settings": {
+                "python": {
+                    "pythonPath": "/home/sycanz/projects/secur-image/env/bin/python"
+                }
+            }
+        }
     }
 }
