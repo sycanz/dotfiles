@@ -12,6 +12,7 @@ alias v="nvim"
 alias c="clear"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias env="source env/bin/activate"
+alias hi="python3 main.py"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
