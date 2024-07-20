@@ -74,6 +74,10 @@
     "lsp": {
         "pyright": {
             "settings": {
+                "python.analysis": {
+                    "diagnosticMode": "workspace",
+                    "typeCheckingMode": "strict"
+                },
                 "python": {
                     "pythonPath": "/home/sycanz/projects/secur-image/env/bin/python"
                 }
