@@ -8,7 +8,7 @@
         "light": "One Light",
         "dark": "Catppuccin Mocha"
     },
-    "active_pane_magnification": 1.2,
+    "active_pane_magnification": 1.0,
     "buffer_font_features": {
         "calt": false
     },
