@@ -16,6 +16,8 @@ alias hi="python3 main.py"
 alias lg="lazygit"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
 
 export NVM_DIR="$HOME/.nvm"
