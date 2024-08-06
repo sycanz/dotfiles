@@ -2,15 +2,15 @@
 I'm using this repo as a way to save all my dotfiles and somewhat keep track of [my linux journey](https://docs.google.com/document/d/1B-zTeHiim_inIiL5ZpCpm374C9v6SGFBlfq2XCstE50/edit?usp=sharing) because why not :)
 
 ## My tools 🔨
-| Tools                |                         |
-| :------------------- | :---------------------- |
-| Shell / prompt       | Oh-my-zsh / Starship    | 
-| Terminal             | Kitty                   |
-| Fonts                | Husklag Mono Nerd Fonts |
-| Editor               | Zed / Nvim (btw)        | 
-| Terminal Multiplexer | Tmux                    |
-| Desktop Environment  | Gnome-COSMIC            |
-| Colourscheme         | Catppuccin-Mocha        |
+| Tools                |                              |
+| :------------------- | :--------------------------- |
+| Shell / prompt       | Oh-my-zsh / Starship         | 
+| Terminal             | Kitty                        |
+| Fonts                | Comic Shanns Mono Nerd Fonts |
+| Editor               | Zed / Nvim (btw)             | 
+| Terminal Multiplexer | Tmux                         |
+| Desktop Environment  | Gnome-COSMIC                 |
+| Colourscheme         | Catppuccin-Mocha             |
 
 ## Installation ⬇️
 According to [this tutorial](https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/), the installation steps are:
