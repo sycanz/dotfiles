@@ -33,13 +33,14 @@ disabled = false
 style = "fg:text"
 
 [os.symbols]
-Pop = " "
+# Pop = " "
+Pop = "🍭"
 
 [username]
 show_always = true
 style_user = "fg:text"
 style_root = "fg:text"
-format = '[$user in ]($style)'
+format = '[$user ]($style)'
 
 [directory]
 style = "red"
@@ -50,7 +51,7 @@ truncation_symbol = "~/"
 [git_branch]
 symbol = ""
 style = "bg:blue"
-format = '[[on $symbol $branch ](fg:blue)]($style)'
+format = '[[$symbol $branch ](fg:blue)]($style)'
 
 [git_status]
 style = "bg:lavender"
@@ -59,42 +60,42 @@ format = '[[($all_status$ahead_behind )](fg:lavender)]($style)'
 [c]
 symbol = " "
 style = "bg:green"
-format = '[[via $symbol( $version) ](fg:green)]($style)'
+format = '[[$symbol( $version) ](fg:green)]($style)'
 
 [golang]
 symbol = ""
 style = "bg:green"
-format = '[[via $symbol( $version) ](fg:green)]($style)'
+format = '[[$symbol( $version) ](fg:green)]($style)'
 
 [php]
 symbol = ""
 style = "bg:green"
-format = '[[via $symbol( $version) ](fg:green)]($style)'
+format = '[[$symbol( $version) ](fg:green)]($style)'
 
 [hostname]
 ssh_symbol = " "
 style = "bg:green"
-format = '[[via $symbol( $version) ](fg:green)]($style)'
+format = '[[$symbol( $version) ](fg:green)]($style)'
 
 [java]
 symbol = " "
 style = "bg:green"
-format = '[[via $symbol( $version) ](fg:green)]($style)'
+format = '[[$symbol( $version) ](fg:green)]($style)'
 
 [lua]
 symbol = " "
 style = "bg:green"
-format = '[[via $symbol( $version) ](fg:green)]($style)'
+format = '[[$symbol( $version) ](fg:green)]($style)'
 
 [python]
 symbol = ""
 style = "bg:green"
-format = '[[via $symbol( $version) ](fg:green)]($style)'
+format = '[[$symbol( $version)( $virtualenv)](fg:green)]($style)'
 
 [docker_context]
 symbol = ""
 style = "bg:green"
-format = '[[via $symbol( $version) ](fg:green)]($style)'
+format = '[[$symbol( $version) ](fg:green)]($style)'
 
 [character]
 disabled = false
