@@ -67,11 +67,6 @@ symbol = ""
 style = "bg:green"
 format = '[[$symbol( $version) ](fg:green)]($style)'
 
-[php]
-symbol = ""
-style = "bg:green"
-format = '[[$symbol( $version) ](fg:green)]($style)'
-
 [hostname]
 ssh_symbol = " "
 style = "bg:green"
@@ -84,6 +79,16 @@ format = '[[$symbol( $version) ](fg:green)]($style)'
 
 [lua]
 symbol = " "
+style = "bg:green"
+format = '[[$symbol( $version) ](fg:green)]($style)'
+
+[nodejs]
+symbol = " "
+style = "bg:green"
+format = '[[$symbol( $version) ](fg:green)]($style)'
+
+[php]
+symbol = ""
 style = "bg:green"
 format = '[[$symbol( $version) ](fg:green)]($style)'
 
