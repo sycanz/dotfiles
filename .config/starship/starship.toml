@@ -58,7 +58,7 @@ style = "bg:lavender"
 format = '[[($all_status$ahead_behind )](fg:lavender)]($style)'
 
 [c]
-symbol = " "
+symbol = ""
 style = "bg:green"
 format = '[[$symbol( $version) ](fg:green)]($style)'
 
@@ -68,22 +68,22 @@ style = "bg:green"
 format = '[[$symbol( $version) ](fg:green)]($style)'
 
 [hostname]
-ssh_symbol = " "
+ssh_symbol = ""
 style = "bg:green"
 format = '[[$symbol( $version) ](fg:green)]($style)'
 
 [java]
-symbol = " "
+symbol = ""
 style = "bg:green"
 format = '[[$symbol( $version) ](fg:green)]($style)'
 
 [lua]
-symbol = " "
+symbol = ""
 style = "bg:green"
 format = '[[$symbol( $version) ](fg:green)]($style)'
 
 [nodejs]
-symbol = " "
+symbol = ""
 style = "bg:green"
 format = '[[$symbol( $version) ](fg:green)]($style)'
 
