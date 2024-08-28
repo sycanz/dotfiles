@@ -14,12 +14,16 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use { "catppuccin/nvim", as = "catppuccin" }
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
     use 'christoomey/vim-tmux-navigator'
     use 'prichrd/netrw.nvim'
     use 'nvim-tree/nvim-web-devicons'
     use 'andweeb/presence.nvim'
+
+    use (
+        'nvim-treesitter/nvim-treesitter',
+        {run = ':TSUpdate'}
+    )
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.6',
