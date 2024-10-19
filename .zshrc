@@ -23,3 +23,14 @@ eval "$(starship init zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# fzf stuffs
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
+
+alias prev="fzf --preview 'bat --color=always {}' --preview-window '~3'"
+
+if [ -e /home/sycanz/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sycanz/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+eval "$(zoxide init zsh)"

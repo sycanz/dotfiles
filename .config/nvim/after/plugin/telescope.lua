@@ -1,4 +1,4 @@
-require('telescope').setup{
+require('telescope').setup {
   defaults = {
     layout_strategy = 'horizontal',
     layout_config = {
@@ -7,7 +7,6 @@ require('telescope').setup{
         width = 0.9,
         prompt_position = 'top',
         preview_width = 0.60,
-
       },
     },
     -- sorting_strategy = "ascending"

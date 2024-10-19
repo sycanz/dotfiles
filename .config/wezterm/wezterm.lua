@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 
 local config = {}
 
-config.color_scheme = 'Catppuccin Mocha'
+config.color_scheme = 'catppuccin-mocha'
 
 -- Get home dir
 local homeDir = os.getenv('HOME')

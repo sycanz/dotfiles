@@ -28,19 +28,19 @@ base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
 
-[os]
-disabled = false
-style = "fg:text"
+# [os]
+# disabled = false
+# style = "fg:text"
 
-[os.symbols]
-# Pop = " "
-Pop = "🍭"
+# [os.symbols]
+#Pop = " "
+# Pop = "🍭"
 
-[username]
-show_always = true
-style_user = "fg:text"
-style_root = "fg:text"
-format = '[$user ]($style)'
+# [username]
+# show_always = true
+# style_user = "fg:text"
+# style_root = "fg:text"
+# format = '[$user ]($style)'
 
 [directory]
 style = "red"
