@@ -12,13 +12,14 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'
+    use "wbthomason/packer.nvim"
     use { "catppuccin/nvim", as = "catppuccin" }
-    use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
-    use 'christoomey/vim-tmux-navigator'
-    use 'prichrd/netrw.nvim'
-    use 'nvim-tree/nvim-web-devicons'
-    use 'andweeb/presence.nvim'
+    use "nvim-lua/plenary.nvim"
+    use "christoomey/vim-tmux-navigator"
+    use "nvim-tree/nvim-web-devicons"
+    use "andweeb/presence.nvim"
+    use "github/copilot.vim"
+    use "cohama/lexima.vim"
 
     use (
         'nvim-treesitter/nvim-treesitter',
@@ -26,9 +27,10 @@ return require('packer').startup(function(use)
     )
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.6',
-        -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        'nvim-telescope/telescope.nvim', tag = '0.1.x',
+        requires = {
+            {'nvim-lua/plenary.nvim'}
+        }
     }
 
     use({
@@ -41,7 +43,9 @@ return require('packer').startup(function(use)
     use {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
-        requires = { {"nvim-lua/plenary.nvim"} }
+        requires = {
+            {"nvim-lua/plenary.nvim"}
+        }
     }
 
     use {
@@ -56,7 +60,7 @@ return require('packer').startup(function(use)
     -- LSP
     use {
         'VonHeikemen/lsp-zero.nvim',
-        branch = 'v3.x',
+        branch = 'v4.x',
         requires = {
             {'williamboman/mason.nvim'},
             {'williamboman/mason-lspconfig.nvim'},
@@ -67,20 +71,19 @@ return require('packer').startup(function(use)
         }
     }
 
-    use {
-        "windwp/nvim-autopairs",
-        event = "InsertEnter",
-        config = function()
-            require("nvim-autopairs").setup {}
-        end
-    }
+    -- use {
+    --     "windwp/nvim-autopairs",
+    --     event = "InsertEnter",
+    --     config = function()
+    --         require("nvim-autopairs").setup {}
+    --     end
+    -- }
 
     use({
-        'MeanderingProgrammer/render-markdown.nvim',
-        after = { 'nvim-treesitter' },
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }, -- if you prefer nvim-web-devicons
-        config = function()
-            require('render-markdown').setup({})
-        end,
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
     })
+
+    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
 end)

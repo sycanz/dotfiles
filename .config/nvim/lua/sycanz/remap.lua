@@ -54,3 +54,6 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+vim.api.nvim_set_keymap("n", "<C-,>", "<Plug>MarkdownPreview", { noremap = false, silent = true })
+vim.api.nvim_set_keymap("n", "<M-s>mp", "<Plug>MarkdownPreview", { noremap = false, silent = true })
