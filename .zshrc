@@ -34,3 +34,9 @@ alias prev="fzf --preview 'bat --color=always {}' --preview-window '~3'"
 if [ -e /home/sycanz/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sycanz/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 eval "$(zoxide init zsh)"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# Added by `rbenv init` on Thu Oct 24 08:03:20 PM +08 2024
+eval "$(rbenv init - --no-rehash zsh)"
+
