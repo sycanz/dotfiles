@@ -84,5 +84,8 @@
                 }
             }
         }
+    },
+    "calls": {
+        "mute_on_join": false
     }
 }

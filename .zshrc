@@ -14,6 +14,8 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias env="source env/bin/activate"
 alias hi="python3 main.py"
 alias lg="lazygit"
+alias prev="fzf --preview 'bat --color=always {}' --preview-window '~3'"
+alias ta="tmux attach"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
@@ -29,9 +31,30 @@ export NVM_DIR="$HOME/.nvm"
 source <(fzf --zsh)
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
 
-alias prev="fzf --preview 'bat --color=always {}' --preview-window '~3'"
-
-if [ -e /home/sycanz/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sycanz/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+# compile/run java files
+function jc() {
+    if [ $# -eq 0 ]; then
+        echo "Usage: $0 <JavaFileName.java>"
+    fi
+    
+    file=$1
+    
+    if [ ! -f "$file" ]; then
+        echo "Error: File $file not found!"
+    fi
+    
+    classname=$(basename "$file" .java)
+    
+    javac "$file"
+    
+    if [ $? -eq 0 ]; then
+        # echo "Compilation successful! Running $classname..."
+        # echo "----------------------------------------"
+        java "$classname"
+    else
+        echo "Compilation failed!"
+    fi
+}
 
 eval "$(zoxide init zsh)"
 
@@ -39,4 +62,4 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Added by `rbenv init` on Thu Oct 24 08:03:20 PM +08 2024
 eval "$(rbenv init - --no-rehash zsh)"
-
+export PATH=$PATH:/home/sycanz/.local/bin
