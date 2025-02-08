@@ -5,11 +5,11 @@ I'm using this repo as a way to save all my dotfiles and somewhat keep track of 
 | Tools                |                              |
 | :------------------- | :--------------------------- |
 | Shell / prompt       | Oh-my-zsh / Starship         | 
-| Terminal             | Kitty                        |
-| Fonts                | Comic Shanns Mono Nerd Fonts |
-| Editor               | Zed / Nvim (btw)             | 
+| Terminal             | Wezterm                      |
+| Fonts                | JetBrains Mono Nerd Font     |
+| Editor               | Nvim (lazy.nvim)             | 
 | Terminal Multiplexer | Tmux                         |
-| Desktop Environment  | Gnome-COSMIC                 |
+| Desktop Environment  | Gnome-COSMIC (Pop_OS!)       |
 | Colourscheme         | Catppuccin-Mocha             |
 
 ## Installation ⬇️
@@ -32,13 +32,11 @@ config checkout
 ``` 
 
 ## Nvim config
-Since packer.nvim is already bootloaded. Just go into `.config/nvim/lua/sycanz/packer.lua` and source the file
+Since lazy.nvim is already bootloaded. Just go into `.config/nvim/lua/config/lazy.lua` or any file in neovim
+
+Run:
 ```
-:so
-```
-then sync packer.nvim:
-```
-:PackerSync
+:Lazy sync
 ```
 
 ## Tmux config
@@ -46,6 +44,6 @@ The prefix of my config is `C-s`
 1. Install [TPM](https://github.com/tmux-plugins/tpm?tab=readme-ov-file#installation).
 2. Source `.tmux.conf` with shortcut `Prefix + r` or
 ```
-source .tmux.conf
+tmux source .tmux.conf
 ```
 3. Install plugin with TPM by using `Prefix + I`
