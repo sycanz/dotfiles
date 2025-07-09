@@ -1,28 +1,33 @@
 return {
     {
-        "williamboman/mason.nvim",
+        "mason-org/mason.nvim",
+        opts = {
+            ui = {
+                icons = {
+                    package_installed = "✓",
+                    package_pending = "➜",
+                    package_uninstalled = "✗"
+                }
+            }
+        },
         config = function()
             require("mason").setup()
         end
     },
     {
+        -- this connects mason and nvim_lsp
+        "mason-org/mason-lspconfig.nvim",
+        opts = {
+            ensure_installed = { "lua_ls" },
+            automatic_installation = true,
+        },
+        dependencies = {
+            "mason-org/mason.nvim",
+            "neovim/nvim-lspconfig",
+        },
+    },
+    {
         "neovim/nvim-lspconfig",
-        dependencies = { "williamboman/mason-lspconfig.nvim" },
-        config = function()
-            require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "pyright", "ts_ls" }, -- Auto-install these LSPs
-                automatic_installation = true,
-            })
-
-            local lspconfig = require("lspconfig")
-
-            -- Basic setup for installed LSPs
-            require("mason-lspconfig").setup_handlers({
-                function(server_name)
-                    lspconfig[server_name].setup({})
-                end
-            })
-        end
     },
     {
         "hrsh7th/nvim-cmp",
