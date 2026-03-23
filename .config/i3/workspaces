@@ -49,3 +49,4 @@ workspace $ws20 output eDP-1
 assign [class="firefox"] $ws5
 assign [class="discord"] $ws9
 assign [class="Spotify"] $ws10
+assign [class="Antigravity"] $ws2
