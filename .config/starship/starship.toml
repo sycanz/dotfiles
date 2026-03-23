@@ -49,13 +49,30 @@ truncation_length = 4
 truncation_symbol = "~/"
 
 [git_branch]
-symbol = ""
+symbol = '🌱'
 style = "bg:blue"
 format = '[[$symbol $branch ](fg:blue)]($style)'
+
+[git_commit]
+disabled = false
+only_detached = false
+style = 'bold green'
+format = '[\($hash$tag\) ]($style)'
 
 [git_status]
 style = "bg:lavender"
 format = '[[($all_status$ahead_behind )](fg:lavender)]($style)'
+conflicted = '🏳'
+ahead = '🏎💨'
+behind = '��'
+diverged = '😵'
+up_to_date = '✓'
+untracked = '?'
+stashed = '📦'
+modified = '📝'
+staged = '[++\($count\)](green)'
+renamed = '👅'
+deleted = '🗑'
 
 [c]
 symbol = ""

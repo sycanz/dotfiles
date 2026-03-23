@@ -20,9 +20,9 @@ return {
         }
     end,
     keys = {
-        { '<leader>pf', function() require('telescope.builtin').find_files() end, mode = "n", desc = "Find files" },
-        { '<leader>lg', function() require('telescope.builtin').live_grep() end, mode = "n", desc = "Live grep" },
-        { '<leader>gt', function() require('telescope.builtin').git_status() end, mode = "n", desc = "Git status" },
+        { '<leader>pf', function() require('telescope.builtin').find_files() end,   mode = "n", desc = "Find files" },
+        { '<leader>lg', function() require('telescope.builtin').live_grep() end,    mode = "n", desc = "Live grep" },
+        { '<leader>gt', function() require('telescope.builtin').git_status() end,   mode = "n", desc = "Git status" },
         { '<leader>gb', function() require('telescope.builtin').git_branches() end, mode = "n", desc = "Git brances" },
     },
 }

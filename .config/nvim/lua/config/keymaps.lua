@@ -42,17 +42,6 @@ vim.api.nvim_set_keymap("n", "<M-s>mp", "<Plug>MarkdownPreview", { noremap = fal
 
 -- Optional: Skip or VSCode-specific mappings
 if not is_vscode then
-    -- VimWithMe
-    map("n", "<leader>vwm", function()
-        require("vim-with-me").StartVimWithMe()
-    end)
-    map("n", "<leader>svwm", function()
-        require("vim-with-me").StopVimWithMe()
-    end)
-
-    -- Run tmux command (won’t work in VSCode terminal)
-    map("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-
     -- Quickfix/Location List navigation
     map("n", "<C-k>", "<cmd>cnext<CR>zz")
     map("n", "<C-j>", "<cmd>cprev<CR>zz")
@@ -73,6 +62,7 @@ if not is_vscode then
 
     -- CellularAutomaton
     map("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
+    map("n", "<leader>gl", "<cmd>CellularAutomaton game_of_life<CR>")
 
     -- Reload file
     map("n", "<leader><leader>", function()
