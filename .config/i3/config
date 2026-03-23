@@ -17,12 +17,12 @@ gaps inner 10px
 
 # execute scripts
 exec --no-startup-id dex --autostart --environment i3                                # execute scripts
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id nm-applet
-exec --no-startup-id /usr/lib/gsd-xsettings
-exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper/kiminonawa.jpg
-exec_always --no-startup-id ~/.config/polybar/scripts/polybar.sh
-exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork               # lock screen
+exec --no-startup-id nm-applet                                                       # network manager
+exec --no-startup-id /usr/lib/gsd-xsettings                                          # gtk dark theme
+exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper/kiminonawa.jpg     # wallpaper
+exec_always --no-startup-id ~/.config/polybar/scripts/polybar.sh                     # status bar
+exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf             # compositor
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
