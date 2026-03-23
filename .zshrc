@@ -6,7 +6,8 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
 source ~/.oh-my-zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
-plugins=(git zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting ssh-agent)
+zstyle :omz:plugins:ssh-agent identities git_key
 source $ZSH/oh-my-zsh.sh
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 

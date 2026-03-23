@@ -9,7 +9,10 @@ I'm using this repo as a way to save all my dotfiles and somewhat keep track of 
 | Fonts                | JetBrains Mono Nerd Font     |
 | Editor               | Nvim (lazy.nvim)             | 
 | Terminal Multiplexer | Tmux                         |
-| Desktop Environment  | Gnome-COSMIC (Pop_OS!)       |
+| Desktop Environment  | i3wm                         |
+| Application Launcher | Rofi                         |
+| Compositor           | Picom                        |
+| Status Bar           | Polybar                      |
 | Colourscheme         | Catppuccin-Mocha             |
 
 ## Installation ⬇️
