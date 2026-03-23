@@ -13,6 +13,7 @@ I'm using this repo as a way to save all my dotfiles and somewhat keep track of 
 | Application Launcher | Rofi                         |
 | Compositor           | Picom                        |
 | Status Bar           | Polybar                      |
+| Notification Centre  | Dunst                        |
 | Colourscheme         | Catppuccin-Mocha             |
 
 ## Installation ⬇️
