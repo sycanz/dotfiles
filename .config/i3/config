@@ -1,0 +1,41 @@
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+set $mod Mod1
+
+include ~/.config/i3/themes/mocha-palette
+include ~/.config/i3/themes/catppuccin-mocha.conf
+include ~/.config/i3/workspaces
+include ~/.config/i3/keybindings
+
+# set font
+font pango:JetBrainsMonoNerdFont-Regular 10
+
+# window setting
+default_border pixel 2
+default_floating_border pixel 2
+
+gaps inner 10px
+
+# execute scripts
+exec --no-startup-id dex --autostart --environment i3                                # execute scripts
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id nm-applet
+exec --no-startup-id /usr/lib/gsd-xsettings
+exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper/kiminonawa.jpg
+exec_always --no-startup-id ~/.config/polybar/scripts/polybar.sh
+exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
+
+# Use pactl to adjust volume in PulseAudio.
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Use Mouse+$mod to drag floating & tiling windows
+floating_modifier $mod
+tiling_drag modifier titlebar
+
+# Display setting for home
+# exec --no-startup-id xrandr --output HDMI-1-0 --mode 1920x1080 --rate 60.00 --left-of DP-1
+# exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --rate 144.00 --right-of DP-1
+# exec --no-startup-id xrandr --output DP-1 --mode 1920x1080 --rate 200.00 --left-of eDP-1

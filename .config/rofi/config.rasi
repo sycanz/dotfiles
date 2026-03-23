@@ -1,0 +1,30 @@
+configuration {
+    show-icons: true;
+    display-drun: "Search";
+}
+
+@theme "catppuccin-default"
+
+inputbar {
+    padding: 10px;
+    /* children: [prompt, entry, num-rows, num-filtered-rows]; */
+}
+
+entry {
+    placeholder: "Type here";
+    placeholder-color: gray;
+}
+
+element {
+    orientation: horizontal;
+    children: [ element-icon, element-text ];
+    spacing: 10px;
+}
+
+element-icon {
+    size: 1.5em;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
